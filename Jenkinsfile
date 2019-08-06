@@ -33,7 +33,7 @@ pipeline {
         stage('Date/Time') {
           steps {
             echo "TimeStamp: ${currentBuild.startTimeInMillis}"
-            echo "TimeStamp: ${Util.getTimeSpanString(System.currentTimeMillis())}"
+            echo "EXECUTED AT ${DATE_TAG}"
           }
         }
       }
