@@ -20,12 +20,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        powershell(script: '-File build.ps1 -target "Build" -verbosity normal', returnStdout: true, returnStatus: true)
+        powershell(script: './build.ps1 -script "./build.cake" -target "Build" -verbosity normal', returnStatus: true)
       }
     }
     stage('Test') {
       steps {
-        powershell(script: '-File build.ps1 -target "Test" -verbosity normal', returnStatus: true, returnStdout: true)
+        powershell(script: './build.ps1 -script "./build.cake" -target "Test" -verbosity normal', returnStatus: true)
       }
     }
   }
