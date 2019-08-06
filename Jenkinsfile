@@ -24,8 +24,18 @@ pipeline {
       }
     }
     stage('Build') {
-      steps {
-        powershell(script: './build.ps1 -script "./build.cake" -target "Build" -verbosity normal', returnStatus: true)
+      parallel {
+        stage('Build') {
+          steps {
+            powershell(script: './build.ps1 -script "./build.cake" -target "Build" -verbosity normal', returnStatus: true)
+          }
+        }
+        stage('Date/Time') {
+          steps {
+            echo 'echo "TimeStamp: ${currentBuild.startTimeInMillis}"'
+            echo 'echo "TimeStamp: ${Util.getTimeSpanString(System.currentTimeMillis())}"'
+          }
+        }
       }
     }
     stage('Test') {
