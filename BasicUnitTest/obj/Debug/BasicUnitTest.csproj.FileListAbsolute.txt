@@ -1,0 +1,17 @@
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\BasicUnitTest.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\BasicUnitTest.pdb
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\SmartE.dll
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\SmartE.pdb
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\source\SmartE\smartE\BasicUnitTest\obj\Debug\BasicUnitTest.dll
+C:\source\SmartE\smartE\BasicUnitTest\obj\Debug\BasicUnitTest.pdb
+C:\source\SmartE\smartE\BasicUnitTest\bin\Debug\BasicUnitTest.xml
+C:\source\SmartE\smartE\BasicUnitTest\obj\Debug\BasicUnitTest.csprojAssemblyReference.cache
+C:\source\SmartE\smartE\BasicUnitTest\obj\Debug\BasicUnitTest.csproj.CoreCompileInputs.cache
+C:\source\SmartE\smartE\BasicUnitTest\obj\Debug\BasicUnitTest.csproj.CopyComplete

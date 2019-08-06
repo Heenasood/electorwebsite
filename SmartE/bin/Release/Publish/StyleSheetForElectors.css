@@ -1,0 +1,125 @@
+﻿body {
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    line-height: 1em;
+    color: darkslategray;
+    font-style: italic;
+}
+
+.inset-text {
+    
+    color: rgba(10,60,150, 0.8);
+    text-shadow: 11px 14px 115px #def, 0 0 1 #000, 1px 4px 6px #def;
+}
+
+.infotxtHeading {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large; 
+}
+
+.infotxt {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.img
+{
+    border-radius:22px;
+}
+
+
+
+.btn {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: dimgrey;
+    text-decoration: none;
+    transition: 0.6s ease;
+    width: 200px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+    .btn:hover {
+        background-color: #42517c;
+        color: lemonchiffon;
+        font-weight:bold;
+        font-size:15px;
+    }
+
+.radio {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: azure;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.lnk {
+    color: azure;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: azure;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.txt {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: azure;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.input {
+    width: 100px;
+    border: 1px solid #0026ff;
+    border-radius: 7px;
+    outline: none;
+    padding: 5px;
+    transition: 6s;
+    width: 170px
+}
+
+    .input:focus {
+        border-color: #aaa;
+        box-shadow: 0 0 8px 0 #aaa;
+    }
+
+.social {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px
+}
+
+
+.auto-style1 {
+    width: 800px;
+}
+
+.auto-style5 {
+    width: 50px;
+}
+
+.auto-style6 {
+    width: 50px;
+}
+
+.auto-style7 {
+    width: 100%;
+}

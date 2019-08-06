@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>System.Text.Json</id>
+    <version>2.0.0.11</version>
+    <title>System.Text.Json</title>
+    <authors>Cyril Jandia</authors>
+    <owners>Cyril Jandia</owners>
+    <licenseUrl>https://github.com/ysharplanguage/FastJsonParser/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/ysharplanguage/FastJsonParser</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A minimalistic and fast JSON parser/deserializer, for full .NET</description>
+    <releaseNotes>FASTER_GETPROPINFO Stable</releaseNotes>
+    <copyright>Copyright (c) 2013, 2014, 2015 Cyril Jandia</copyright>
+    <tags>Fast JSON parser deserializer POCO</tags>
+    <dependencies />
+  </metadata>
+</package>

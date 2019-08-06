@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CandidateSite.Master.cs" Inherits="SmartE.Site4" %>
+
+<!DOCTYPE html>
+
+<head runat="server">
+
+    <link href="AdminStyleSheet.css" rel="stylesheet" />
+
+    <title>SmartElector-Admin</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 392px;
+        }
+
+        .auto-style2 {
+            width: 261px;
+        }
+    </style>
+</head>
+<body class="is-preload">
+    <form id="form2" runat="server">
+
+        <!-- Header -->
+        <header id="header">
+            <a class="logo" href="DashboardCandidate.aspx">SmartElector -
+                <asp:Label ID="lblWelcome" runat="server"></asp:Label></a>
+            <nav>
+                <asp:Button ID="btnLogout" CssClass="button primary fit" runat="server" Text="Logout" OnClick="btnLogout_Click" Style="margin-left: 0px" />
+
+            </nav>
+        </header>
+        <div>
+
+            <table class="auto-style1">
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+           <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </form>
+</body>
+</html>
+

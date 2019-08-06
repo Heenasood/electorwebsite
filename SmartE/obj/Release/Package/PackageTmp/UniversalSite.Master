@@ -1,0 +1,656 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UniversalSite.Master.cs" Inherits="SmartE.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+    
+    </html>
+
+<head>
+    <title>Smart-Elector</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+</head>
+<body class="is-preload">
+    
+    <!-- Header -->
+    <header id="header">
+        <a class="logo" href="UniversalHome.aspx">Smart-Elector</a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="/UniversalHome.aspx">Home</a></li>
+            <li><a href="/AboutUs.aspx">About Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="/ContactUs.aspx">Contact US</a></li>
+            <li><a href="/Login.aspx">Login</a></li>
+            <li><a href="/Registration.aspx">Register</a></li>
+        </ul>
+    </nav>
+
+
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+        </form>
+    <%--    <!-- Highlights -->
+    <section class="wrapper">
+        <div class="inner">
+            <header class="special">
+                <h2>THE FREEDON TO CHOOSE BEST!</h2>
+                <p>
+                    We believe that anything is possible with the right platform.
+Whether you want to make a right decision or you want to choose a right candidate for your bright future.
+We have got you every thing covered.
+                </p>
+                <br />
+                <b>
+                    <h3>ISN'T THAT GREAT!</h3>
+                </b>
+            </header>
+            <div class="highlights">
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+                            <h3>Feugiat consequat</h3>
+                        </header>
+                        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-files-o"><span class="label">Icon</span></a>
+                            <h3>Ante sem integer</h3>
+                        </header>
+                        <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+                            <h3>Donations</h3>
+                        </header>
+                        <p>If you are interested in supporting you may donate for the nobel cause or fund for the society</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-line-chart"><span class="label">Icon</span></a>
+                            <h3>Dashboard</h3>
+                        </header>
+                        <p>EASY TO READ: Results are displayed through graph and bar.</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-paper-plane-o"><span class="label">Icon</span></a>
+                            <h3>FAQs</h3>
+                        </header>
+                        <p>Connect to our FAQs page to quick access</p>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <header>
+                            <a href="#" class="icon fa-qrcode"><span class="label">Icon</span></a>
+                            <h3>Questions?</h3>
+                        </header>
+                        <p>Send us and email and we will get back to us soon</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="wrapper">
+        <div class="inner">
+            <h2>Mōhiotanga</h2>
+            <p>
+                <b>Knowledge, intelligence, awareness or insight<br />
+                    When dealing with people, remember you are not dealing with creatures of logic, but with creatures of emotion. -Dale Carnegie</b>
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="wrapper">
+        <div class="inner">
+            <header class="special">
+                <h2>Faucibus consequat lorem</h2>
+                <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+            </header>
+            <div class="testimonials">
+                <section>
+                    <div class="content">
+                        <blockquote>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="images/pic01.jpg" alt="" />
+                            </div>
+                            <p class="credit">- <strong>Jane Doe</strong> <span>CEO - ABC Inc.</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <blockquote>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="images/pic03.jpg" alt="" />
+                            </div>
+                            <p class="credit">- <strong>John Doe</strong> <span>CEO - ABC Inc.</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="content">
+                        <blockquote>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+                        </blockquote>
+                        <div class="author">
+                            <div class="image">
+                                <img src="images/pic02.jpg" alt="" />
+                            </div>
+                            <p class="credit">- <strong>Janet Smith</strong> <span>CEO - ABC Inc.</span></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>--%>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="content">
+                <section>
+                    <h3>VOTING PROCESS:</h3>
+                    <p>
+                        Candidates and Electors can register them for free to explore the active candidates their profile and their released manfestoes.<br />
+                        The results are displayed through graph and statistics 
+                    </p>
+                    <ul>
+                        <li>Enrollment Of Electors</li>
+                        <li>Pre-Registration For Online Voting</li>
+                        <li>Authenticating </li>
+                        <li>Casting & Counting A Vote</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Links</h4>
+                    <ul class="alt">
+                        <li><a href="/UniversalHome.aspx">Home</a></li>
+                        <li><a href="/AboutUs.aspx">About Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="/ContactUs.aspx">Contact US</a></li>
+                        <li><a href="/Login.aspx">Login</a></li>
+                        <li><a href="/Registration.aspx">Register</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Social Connect:</h4>
+                    <ul class="plain">
+                        <li><a href="#"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+                        <li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+                        <li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+                        <li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="copyright">
+                &copy; <h3><a href="http://heenasood.co.nf">Copyright &copy; 2019 - Heena Sood</a> </h3>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    </form>
+</body>
+<%--<head runat="server">
+    <title>SmartE</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <link type="text/css" href="StyleSheetForElectors.css" rel="stylesheet" />
+    <style type="text/css">
+        html, body, #canvasMap {
+            height: 50%;
+            margin: 0px;
+            padding: 0px
+        }
+    </style>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript">  
+        var map;
+        function LoadGoogleMAP() {
+            var SetmapOptions = {
+                zoom: 10,
+                center: new google.maps.LatLng(-34.397, 150.644)
+            };
+            map = new google.maps.Map(document.getElementById('canvasMap'),
+                SetmapOptions);
+        }
+
+        google.maps.event.addDomListener(window, 'load', LoadGoogleMAP);
+
+    </script>
+
+    <%--     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>  
+    <script>  
+        var mapcode;  
+        var diag;  
+        function initialize() {  
+            mapcode = new google.maps.Geocoder();  
+            var lnt = new google.maps.LatLng(26.45, 82.85);  
+            var diagChoice = {  
+                zoom: 9,  
+                center: lnt,  
+                diagId: google.maps.MapTypeId.ROADMAP  
+            }  
+            diag = new google.maps.Map(document.getElementById('map_populate'), diagChoice);  
+        }  
+        function getmap() {  
+            var completeaddress = document.getElementById('txt_location').value;  
+            mapcode.geocode({ 'address': completeaddress }, function (results, status) {  
+                if (status == google.maps.GeocoderStatus.OK) {  
+                    diag.setCenter(results[0].geometry.location);  
+                    var hint = new google.maps.Marker({  
+                        diag: diag,  
+                        position: results[0].geometry.location  
+                    });  
+                } else {  
+                    alert('Location Not Tracked. ' + status);  
+                }  
+            });  
+        }  
+        google.maps.event.addDomListener(window, 'load', initialize);  
+    </script>  --%>
+    <%--    <!DOCTYPE link href="https://maps/documentation/javascript/examples/default.css" rel="stylesheet" />
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false" type="text/javascript"></script>
+    <script>  
+
+                //********FUNCTION1*****
+        //var mapcode;
+        //var diag;
+        //function initialize() {
+        //    mapcode = new google.maps.Geocoder();
+        //    var lnt = new google.maps.LatLng(26.45, 82.85);
+        //    var diagChoice = {
+        //        zoom: 9,
+        //        center: lnt,
+        //        diagId: google.maps.MapTypeId.ROADMAP
+        //    }
+        //    diag = new google.maps.Map(document.getElementById('map_populate'), diagChoice);
+        //}
+        //function getmap() {
+        //    var completeaddress = document.getElementById('txt_location').value;
+        //    mapcode.geocode({ 'address': completeaddress }, function (results, status) {
+        //        if (status == google.maps.GeocoderStatus.OK) {
+        //            diag.setCenter(results[0].geometry.location);
+        //            var hint = new google.maps.Marker({
+        //                diag: diag,
+        //                position: results[0].geometry.location
+        //            });
+        //        } else {
+        //            alert('Location Not Tracked. ' + status);
+        //        }
+        //    });
+        //}
+        //google.maps.event.addDomListener(window, 'load', initialize);
+
+
+        //********FUNCTION2*****
+
+//        function initialize() {
+//    var latlng = new google.maps.LatLng(-34.397, 150.644);
+//    var options =
+//    {
+//        zoom: 3,
+//        center: new google.maps.LatLng(37.09, -95.71),
+//        mapTypeId: google.maps.MapTypeId.ROADMAP,
+//        mapTypeControl: true,
+//        mapTypeControlOptions:
+//        {
+//            style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+//            poistion: google.maps.ControlPosition.TOP_RIGHT,
+//            mapTypeIds: [google.maps.MapTypeId.ROADMAP, 
+//              google.maps.MapTypeId.TERRAIN, 
+//              google.maps.MapTypeId.HYBRID, 
+//              google.maps.MapTypeId.SATELLITE]
+//        },
+//        navigationControl: true,
+//        navigationControlOptions:
+//        {
+//            style: google.maps.NavigationControlStyle.ZOOM_PAN
+//        },
+//        scaleControl: true,
+//        disableDoubleClickZoom: true,
+//        draggable: false,
+//        streetViewControl: true,
+//        draggableCursor: 'move'
+//    };
+//    var map = new google.maps.Map(document.getElementById("map"), options);
+//}
+//        window.onload = initialize;
+
+
+        
+        //********FUNCTION3*****
+
+        function markicons() {
+   InitializeMap();
+
+        var ltlng = [];
+
+        ltlng.push(new google.maps.LatLng(17.22, 78.28));
+        ltlng.push(new google.maps.LatLng(13.5, 79.2));
+        ltlng.push(new google.maps.LatLng(15.24, 77.16));
+
+        map.setCenter(ltlng[0]);
+        for (var i = 0; i <= ltlng.length; i++) {
+            marker = new google.maps.Marker({
+                map: map,
+                position: ltlng[i]
+            });
+
+            (function (i, marker) {
+
+                google.maps.event.addListener(marker, 'click', function () {
+
+                    if (!infowindow) {
+                        infowindow = new google.maps.InfoWindow();
+                    }
+
+                    infowindow.setContent("Message" + i);
+
+                    infowindow.open(map, marker);
+
+                });
+
+            })(i, marker);
+
+        }
+}
+
+
+
+
+
+    </script>--%>
+
+
+
+
+<%--    <script>
+        var map;
+        function initialize() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: new google.maps.LatLng(48.1293954, 11.556663), // Munich Germany
+                zoom: 10
+            });
+        }
+
+        function newLocation(newLat, newLng) {
+            map.setCenter({
+                lat: newLat,
+                lng: newLng
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+    <style type="text/css">
+        .auto-style8 {
+            height: 80px;
+            text-align: right;
+        }
+
+        .auto-style9 {
+            margin-left: 54px;
+        }
+
+        .auto-style10 {
+            text-align: center;
+        }
+    </style>
+</head>--%>
+<%--<body>
+    <form id="form1" runat="server">
+        <asp:Panel ID="Panel1" runat="server" Style="max-width: 3000px; max-height: 2000px" BackColor="#002953">
+            <div style="margin-left: 350px; margin-top: 0px" class="auto-style8">
+
+                <asp:Image ID="Image1" runat="server" ImageAlign="Right" ImageUrl="~/images/LogoSample_ByTailorBrands (11).JPG" Height="81px" CssClass="auto-style9" Width="220px" />
+            </div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style5">
+                        <h1>&nbsp;</h1>
+                    </td>
+                    <td style="align-content: center;" colspan="4">
+
+                        <asp:Panel ID="Panel2" BackImageUrl="images/banner1.jpg" runat="server" Height="378px" Width="1360px">
+                        </asp:Panel>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td colspan="4">
+                        <asp:Menu ID="Menu1" runat="server" DynamicHorizontalOffset="2" Font-Names="Arial" Font-Size="1.0em" ForeColor="Azure" Orientation="Horizontal" StaticSubMenuIndent="10px" DynamicHoverStyle-CssClass="img" CssClass="header">
+                            <DynamicHoverStyle BackColor="#14274c" ForeColor="White" />
+                            <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <DynamicMenuStyle BackColor="#2C231C" />
+                            <DynamicSelectedStyle BackColor="#18253e" />
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/UniversalHome.aspx" Text="Home" Value="Home"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/AboutUs.aspx" Text="About Us" Value="About Us"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="Contact Us" Value="Contact Us"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login" Value="Login">
+                                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Candidate" Value="Candidate"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Elector" Value="Elector"></asp:MenuItem>
+                                    <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Admin" Value="Admin"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Register" Value="Register"></asp:MenuItem>
+                            </Items>
+                            <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                            <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                            <StaticSelectedStyle BackColor="#507CD1" />
+                            <StaticMenuItemStyle HorizontalPadding="10px" />
+                        </asp:Menu>
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td colspan="4">
+
+                        <div>
+                        </div>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="7">
+                        <hr />
+                    </td>
+                    <td colspan="4">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="auto-style10"><a class="txt" href="UniversalHome.aspx" style="text-decoration: none">Home</a><br />
+                        <a class="txt" href="AboutUs.aspx" style="text-decoration: none">About Us</a><br />
+                        <a class="txt" href="ContactUs.aspx" style="text-decoration: none">Contact Us</a><br />
+                    </td>
+                    <td class="txt">&nbsp;&nbsp;New Member? <a class="txt" href="Register.aspx" style="text-decoration: none; color: cornflowerblue">Register Here</a>
+                        <br />
+                        Existing Member? <a class="txt" href="Login.aspx" style="text-decoration: none; color: cornflowerblue">Click Here</a> To Login</td>
+                    <td class="txt"><a href="NotAvailable.aspx">
+                        <img src="images/facebook.png" class="social" />
+                    </a>&nbsp;&nbsp; <a href="NotAvailable.aspx">
+                        <img src="images/twitter.png" class="social" />
+                    </a>&nbsp;&nbsp; <a href="NotAvailable.aspx">
+                        <img src="images/instagram.jpg" class="social" />
+                    </a>&nbsp;&nbsp; <a href="NotAvailable.aspx">
+                        <img src="images/googleplus.png" class="social" />
+                    </a>&nbsp;&nbsp; <a href="NotAvailable.aspx">
+                        <img src="images/linkedin.png" class="social" />
+                    </a>&nbsp;&nbsp; </td>
+                </tr>
+
+                <tr>
+                    <td class="auto-style5">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>--%>
+                        <%--   <div>
+                            <h1>Enter Your Location Details</h1>
+                        </div>
+                        <div>
+                            <asp:TextBox ID="txt_location" TextMode="MultiLine" Width="400px" Height="70px" runat="server"></asp:TextBox>
+                        </div>
+                        <div>
+                            <input type="button" value="Search" onclick="getmap()">
+                        </div>
+                        <div style="width: 100%; height: 500px; border: 5px solid #5E5454;">
+                            <asp:ScriptManager ID="sManager" runat="server" />
+                            <asp:UpdatePanel ID="pnlTest" runat="server" style="height:400px;">
+                                <ContentTemplate>
+                                    <div style="height: 60%;" id="map"></div>
+
+                                    <asp:TextBox ID="txtLat" runat="server" />
+                                    <asp:TextBox ID="txtLong" runat="server" />
+                                    <asp:Button ID="btnSubmit" Text="Submit" runat="server" />
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>--%>--%>
+    
+
+<%--                        <script>
+                            var canvas = document.getElementById("canvas");
+                            var ctx = canvas.getContext("2d");
+                            var radius = canvas.height / 2;
+                            ctx.translate(radius, radius);
+                            radius = radius * 0.90
+                            setInterval(drawClock, 1000);
+
+                            function drawClock() {
+                                drawFace(ctx, radius);
+                                drawNumbers(ctx, radius);
+                                drawTime(ctx, radius);
+                            }
+
+                            function drawFace(ctx, radius) {
+                                var grad;
+                                ctx.beginPath();
+                                ctx.arc(0, 0, radius, 0, 2 * Math.PI);
+                                ctx.fillStyle = 'white';
+                                ctx.fill();
+                                grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);
+                                grad.addColorStop(0, '#333');
+                                grad.addColorStop(0.5, 'white');
+                                grad.addColorStop(1, '#333');
+                                ctx.strokeStyle = grad;
+                                ctx.lineWidth = radius * 0.1;
+                                ctx.stroke();
+                                ctx.beginPath();
+                                ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+                                ctx.fillStyle = '#333';
+                                ctx.fill();
+                            }
+
+                            function drawNumbers(ctx, radius) {
+                                var ang;
+                                var num;
+                                ctx.font = radius * 0.15 + "px arial";
+                                ctx.textBaseline = "middle";
+                                ctx.textAlign = "center";
+                                for (num = 1; num < 13; num++) {
+                                    ang = num * Math.PI / 6;
+                                    ctx.rotate(ang);
+                                    ctx.translate(0, -radius * 0.85);
+                                    ctx.rotate(-ang);
+                                    ctx.fillText(num.toString(), 0, 0);
+                                    ctx.rotate(ang);
+                                    ctx.translate(0, radius * 0.85);
+                                    ctx.rotate(-ang);
+                                }
+                            }
+
+                            function drawTime(ctx, radius) {
+                                var now = new Date();
+                                var hour = now.getHours();
+                                var minute = now.getMinutes();
+                                var second = now.getSeconds();
+                                //hour
+                                hour = hour % 12;
+                                hour = (hour * Math.PI / 6) +
+                                    (minute * Math.PI / (6 * 60)) +
+                                    (second * Math.PI / (360 * 60));
+                                drawHand(ctx, hour, radius * 0.5, radius * 0.07);
+                                //minute
+                                minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));
+                                drawHand(ctx, minute, radius * 0.8, radius * 0.07);
+                                // second
+                                second = (second * Math.PI / 30);
+                                drawHand(ctx, second, radius * 0.9, radius * 0.02);
+                            }
+
+                            function drawHand(ctx, pos, length, width) {
+                                ctx.beginPath();
+                                ctx.lineWidth = width;
+                                ctx.lineCap = "round";
+                                ctx.moveTo(0, 0);
+                                ctx.rotate(pos);
+                                ctx.lineTo(0, -length);
+                                ctx.stroke();
+                                ctx.rotate(-pos);
+                            }
+                        </script>--%>
+<%--                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </asp:Panel>
+    </form>
+</body>--%>
+</html>

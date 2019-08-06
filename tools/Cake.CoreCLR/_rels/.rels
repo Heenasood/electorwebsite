@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+  <Relationship Type="http://schemas.microsoft.com/packaging/2010/07/manifest" Target="/Cake.CoreCLR.nuspec" Id="R26353d4a12a547ef" />
+  <Relationship Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="/package/services/metadata/core-properties/15ee126c42a242ae9f886c912427bc1d.psmdcp" Id="Ra057d1a18b774e7d" />
+</Relationships>

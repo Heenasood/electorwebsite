@@ -1,0 +1,51 @@
+﻿
+
+.btn {
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    color: darkslategray;
+    text-decoration: none;
+    transition: 0.6s ease;
+    width: 200px;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.input {
+    width: 100px;
+    border: 1px solid #0026ff;
+    border-radius: 7px;
+    outline: none;
+    padding: 5px;
+    transition: 6s;
+    width:110px;
+}
+
+.txt {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.radio {
+    font-family: Arial, Helvetica, Arial, Helvetica, sans-serif;
+    color: darkslategray;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+<style type="text/css" >
+#imageLoader {
+    border: 1px solid #B0B0B0;
+    height: 160px;
+    width: 160px;
+    background-image: url('images/Error500.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+}
+
+</style >
