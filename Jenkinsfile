@@ -32,8 +32,11 @@ pipeline {
         }
         stage('Date/Time') {
           steps {
-            echo 'echo "TimeStamp: ${currentBuild.startTimeInMillis}"'
-            echo 'echo "TimeStamp: ${Util.getTimeSpanString(System.currentTimeMillis())}"'
+            script {
+              echo "TimeStamp: ${currentBuild.startTimeInMillis}"
+              echo "TimeStamp: ${Util.getTimeSpanString(System.currentTimeMillis())}"
+            }
+
           }
         }
       }
