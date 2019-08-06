@@ -13,7 +13,12 @@ pipeline {
         }
         stage('Tester') {
           steps {
-            echo 'This is Tested By ${Tester}'
+            script {
+              DATE_TAG = java.time.LocalDate.now()
+              DATETIME_TAG = java.time.LocalDateTime.now()
+            }
+
+            echo "This is Tested By ${Tester} and ${DATETIME_TAG} and ${DATE_TAG}"
           }
         }
       }
