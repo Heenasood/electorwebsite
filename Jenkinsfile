@@ -20,12 +20,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        powershell(script: 'powershell -ExecutionPolicy ByPass -File build.ps1 -script "c:\\source\\SmartE\\SmartE\\build.cake" -target "Build" -verbosity normal', returnStdout: true, returnStatus: true)
+        powershell(script: 'powershell -ExecutionPolicy ByPass -File build.ps1 -target "Build" -verbosity normal', returnStdout: true, returnStatus: true)
       }
     }
     stage('Test') {
       steps {
-        powershell(script: 'powershell -ExecutionPolicy ByPass -File build.ps1 -script "c:\\source\\SmartE\\SmartE\\build.cake" -target "Test" -verbosity normal', returnStatus: true, returnStdout: true)
+        powershell(script: 'powershell -ExecutionPolicy ByPass -File build.ps1 -target "Test" -verbosity normal', returnStatus: true, returnStdout: true)
       }
     }
   }
