@@ -58,7 +58,7 @@ pipeline {
             builds["${node_name} ${option_inside}"] = {
               node {
                 stage("Build Test ${node_name} ${option_inside}") {
-                  echo "${node_name}"
+                  echo "${node_name} ${Tester} ${option_inside}"
                 }
               }
             }
