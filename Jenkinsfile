@@ -74,4 +74,32 @@ pipeline {
     Windows = 'windows'
     Linux = 'linux'
   }
+  post {
+    always {
+      echo 'This will always run'
+
+    }
+
+    success {
+      echo 'This will run only if successful'
+
+    }
+
+    failure {
+      mail(bcc: 'heena.sood@infotools.com', body: "<b>Example</b><br>Project: ${Tester} <br>Build Number: ${node_name} <br> URL de build: ${option_inside}", cc: 'heena.sood@infotools.com', charset: 'UTF-8', from: 'heena.sood@infotools.com', mimeType: 'text/html', replyTo: 'heena.sood@infotools.com', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: 'heena.sood@infotools.com')
+
+    }
+
+    unstable {
+      echo 'This will run only if the run was marked as unstable'
+
+    }
+
+    changed {
+      echo 'This will run only if the state of the Pipeline has changed'
+      echo 'For example, if the Pipeline was previously failing but is now successful'
+
+    }
+
+  }
 }
