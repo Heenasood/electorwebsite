@@ -63,7 +63,7 @@ pipeline {
                 stage("Build Test ${node_name} ${option_inside}") {
 
                   echo "5th stage"
-                  sh 'ping -c 10 localhost'
+                  sh 'ping -c 8080 localhost'
                 }
               }
             }
