@@ -47,7 +47,6 @@ pipeline {
       steps {
         script {
           def builds = [:]
-
           for (def option in ["one", "two"]) {
             def node_name = ""
             if ("one" == "${option}") {
@@ -55,15 +54,12 @@ pipeline {
             } else {
               node_name = "node002"
             }
-
             def option_inside = "${option}"
-
             builds["${node_name} ${option_inside}"] = {
               node {
                 stage("Build Test ${node_name} ${option_inside}") {
-
-                  echo "5th stage"
-
+                  Entered in Node
+                  powershell(script: './build.ps1 -script "./build.cake" -target "Test" -verbosity normal', returnStatus: true)
                 }
               }
             }
@@ -76,5 +72,7 @@ pipeline {
   }
   environment {
     Tester = 'Heena'
+    Windows = 'windows'
+    Linux = 'linux'
   }
 }
