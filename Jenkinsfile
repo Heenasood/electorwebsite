@@ -61,7 +61,9 @@ pipeline {
             builds["${node_name} ${option_inside}"] = {
               node {
                 stage("Build Test ${node_name} ${option_inside}") {
-                  echo 'Hello inside 4th stage'
+
+                  echo "5th stage"
+                  sh 'ping -c 10 localhost'
                 }
               }
             }
