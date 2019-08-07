@@ -59,7 +59,7 @@ pipeline {
               node {
                 stage("Build Test ${node_name} ${option_inside}") {
                   Entered in Node
-                  sh './build.ps1 -script "./build.cake" -target "Test" -verbosity normal', returnStatus: true
+                  echo ${Tester} ${node_name} ${option_inside}
                 }
               }
             }
