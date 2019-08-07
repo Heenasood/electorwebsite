@@ -63,7 +63,7 @@ pipeline {
                 stage("Build Test ${node_name} ${option_inside}") {
 
                   echo "5th stage"
-                  sh 'ping -c 192.168.10.99'
+
                 }
               }
             }
