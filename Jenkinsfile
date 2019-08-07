@@ -59,7 +59,7 @@ pipeline {
               node {
                 stage("Build Test ${node_name} ${option_inside}") {
                   Entered in Node
-                  echo "${Tester} ${node_name} ${option_inside}"
+                  echo "${node_name} + ${option_inside}"
                 }
               }
             }
