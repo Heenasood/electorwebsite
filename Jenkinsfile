@@ -68,6 +68,11 @@ pipeline {
 
       }
     }
+    stage('Notify') {
+      steps {
+        emailext(subject: 'EMAIL FROM JENKINS', body: 'TEST EMAIL', attachLog: true, from: 'Heena.Sood@infotools.com', mimeType: 'text/html', to: 'Heena.Sood@infotools.com')
+      }
+    }
   }
   environment {
     Tester = 'Heena'
