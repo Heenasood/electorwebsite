@@ -43,6 +43,34 @@ pipeline {
         powershell(script: './build.ps1 -script "./build.cake" -target "Test" -verbosity normal', returnStatus: true)
       }
     }
+    stage('Build/test') {
+      steps {
+        script {
+          def builds = [:]
+
+          for (def option in ["one", "two"]) {
+            def node_name = ""
+            if ("one" == "${option}") {
+              node_name = "node001"
+            } else {
+              node_name = "node002"
+            }
+
+            def option_inside = "${option}"
+
+            builds["${node_name} ${option_inside}"] = {
+              node {
+                stage("Build Test ${node_name} ${option_inside}") {
+                  echo 'Hello inside 4th stage'
+                }
+              }
+            }
+          }
+          parallel builds
+        }
+
+      }
+    }
   }
   environment {
     Tester = 'Heena'
