@@ -44,6 +44,38 @@ pipeline {
       }
     }
     stage('Build/test') {
+      post {
+        success {
+          echo 'Test succeeded'
+          script {
+            mail(bcc: 'heena.sood@infotools.com',
+            body: "Run ${node_name}-#${option_inside} succeeded. To get more details, visit the build results page: ${Tester}.",
+            cc: 'heena.sood@infotools.com',
+            from: 'jenkins-admin@gmail.com',
+            replyTo: 'heena.sood@infotools.com',
+            subject: "${node_name} ${option_inside} succeeded",
+            to: env.notification_email)
+            if (env.archive_war =='yes')
+            {
+              // ArchiveArtifact plugin
+              // archiveArtifacts '**/java-calculator-*-SNAPSHOT.jar'
+            }
+            // Cucumber report plugin
+            // cucumber fileIncludePattern: '**/java-calculator/target/cucumber-report.json', sortingMethod: 'ALPHABETICAL'
+            //publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: '/home/reports', reportFiles: 'reports.html', reportName: 'Performance Test Report', reportTitles: ''])
+            echo 'Mail send'
+          }
+
+
+        }
+
+        failure {
+          echo 'Test failed'
+          mail(bcc: 'heena.sood@infotools.com', body: "Run ${node_name}-#${option_inside} succeeded. To get more details, visit the build results page: ${Tester}.", cc: 'heena.sood@infotools.com', from: 'jenkins-admin@gmail.com', replyTo: 'heena.sood@infotools.com', subject: "${node_name} ${option_inside} failed", to: env.notification_email)
+
+        }
+
+      }
       steps {
         script {
           def builds = [:]
