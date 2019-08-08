@@ -72,7 +72,7 @@ pipeline {
     }
     stage('Notify') {
       steps {
-        emailext(subject: 'EMAIL FROM JENKINS', body: 'TEST EMAIL "${Tester}"', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
+        emailext(subject: 'EMAIL FROM JENKINS', body: 'TEST EMAIL "${TESTER}"', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com', attachLog: true)
       }
     }
     stage('Mail') {
@@ -82,7 +82,7 @@ pipeline {
     }
     stage('About_Build') {
       steps {
-        emailext(subject: '$BUILD_STATUS', body: '${JELLY_SCRIPT, templte="html"} <br/> Please find build url below for checking logs <br\\> $BUILD_URL', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
+        emailext(subject: '$BUILD_STATUS', body: 'Hello, <br\\><br\\>${JELLY_SCRIPT, template="html"} <br\\><br/> Please find build url below for checking logs<br\\> <br\\> $BUILD_URL  <br\\><br\\> Thanks, <br\\> Team Jenkins', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
   }
