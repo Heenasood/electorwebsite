@@ -75,7 +75,7 @@ pipeline {
     }
     stage('Mail') {
       steps {
-        mail(subject: 'MAIL from BLUE OCEAN', body: 'echo "Test mail from blue ocean. Tester: ${Tester}"', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
+        mail(subject: 'MAIL from BLUE OCEAN', body: 'Test mail from blue ocean. Tester: \'$Tester\'', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
   }
