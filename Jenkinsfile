@@ -81,6 +81,11 @@ pipeline {
       }
     }
   }
+  environment {
+    Tester = 'Heena'
+    Windows = 'windows'
+    Linux = 'linux'
+  }
   post {
     always {
       echo 'This will always run'
