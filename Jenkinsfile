@@ -80,6 +80,11 @@ pipeline {
         mail(subject: 'MAIL from BLUE OCEAN', body: 'Test mail from blue ocean. Tester: \'$Tester\'', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
+    stage('About_Build') {
+      steps {
+        emailext(subject: '$BUILD_STATUS', body: '${JELLY_SCRIPT, templte="html"} <br/> Please find build url below for checking logs <br\\> $BUILD_URL', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
+      }
+    }
   }
   environment {
     Tester = 'Heena'
