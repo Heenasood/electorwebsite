@@ -70,7 +70,12 @@ pipeline {
     }
     stage('Notify') {
       steps {
-        emailext(subject: 'EMAIL FROM JENKINS', body: 'TEST EMAIL', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'Heena.Sood@infotools.com')
+        emailext(subject: 'EMAIL FROM JENKINS', body: 'TEST EMAIL', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com', replyTo: 'heena.sood@infotools.com')
+      }
+    }
+    stage('Mail') {
+      steps {
+        mail(subject: 'MAIL from BLUE OCEAN', body: 'Test mail from blue ocean. Tester: ${Tester}', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
   }
