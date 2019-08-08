@@ -4,6 +4,8 @@ pipeline {
     stage('Enter') {
       environment {
         Tester = 'Heena'
+        Windows = 'windows'
+        Linux = 'linux'
       }
       parallel {
         stage('Enter') {
@@ -78,11 +80,6 @@ pipeline {
         mail(subject: 'MAIL from BLUE OCEAN', body: 'Test mail from blue ocean. Tester: \'$Tester\'', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
-  }
-  environment {
-    Tester = 'Heena'
-    Windows = 'windows'
-    Linux = 'linux'
   }
   post {
     always {
