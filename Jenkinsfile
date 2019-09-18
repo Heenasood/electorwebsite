@@ -22,7 +22,7 @@ pipeline {
             }
 
             echo "This is Tested By ${Tester} and ${DATETIME_TAG} and ${DATE_TAG}"
-            mail(subject: 'MAIL from BLUE OCEAN - Stage1', body: "'Test mail from blue ocean. Tester: ${TESTER}'", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: "$To")
+            mail(subject: 'MAIL from BLUE OCEAN - Stage1', body: "Test mail from blue ocean. Tester: ${TESTER}", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: "$To")
           }
         }
       }
@@ -84,7 +84,9 @@ pipeline {
     }
     stage('About_Build') {
       steps {
-        emailext(subject: '$BUILD_STATUS', body: '${JELLY_SCRIPT, template="html"} <br\\><br/> Please find build url below for checking logs <br\\><br\\> <br\\>   Thanks, <br\\> Team Jenkins $BUILD_URL', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
+        emailext(subject: '$BUILD_STATUS', body: '''${JELLY_SCRIPT, template="html"} <br\\><br/> Please find build url below for checking logs/n/n
+
+   Thanks, <br\\> Team Jenkins $BUILD_URL''', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
   }
