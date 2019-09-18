@@ -6,6 +6,7 @@ pipeline {
         Tester = 'Heena'
         Windows = 'windows'
         Linux = 'linux'
+        To = 'Heena.Sood@infotools.com'
       }
       parallel {
         stage('Enter') {
@@ -21,6 +22,7 @@ pipeline {
             }
 
             echo "This is Tested By ${Tester} and ${DATETIME_TAG} and ${DATE_TAG}"
+            mail(subject: 'MAIL from BLUE OCEAN - Stage1', body: "'Test mail from blue ocean. Tester: ${TESTER}'", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: "'$To'")
           }
         }
       }
@@ -77,7 +79,7 @@ pipeline {
     }
     stage('Mail') {
       steps {
-        mail(subject: 'MAIL from BLUE OCEAN', body: 'Test mail from blue ocean. Tester: ${TESTER}', from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
+        mail(subject: 'MAIL from BLUE OCEAN', body: "'Test mail from blue ocean. Tester: ${TESTER}'", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: 'heena.sood@infotools.com')
       }
     }
     stage('About_Build') {
@@ -90,6 +92,7 @@ pipeline {
     Tester = 'Heena'
     Windows = 'windows'
     Linux = 'linux'
+    To1 = 'Heena.Sood@infotools.com'
   }
   post {
     always {
