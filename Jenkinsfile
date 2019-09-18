@@ -22,7 +22,7 @@ pipeline {
             }
 
             echo "This is Tested By ${Tester} and ${DATETIME_TAG} and ${DATE_TAG}"
-            mail(subject: 'MAIL from BLUE OCEAN - Stage1', body: "'Test mail from blue ocean. Tester: ${TESTER}'", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: '"$To"')
+            mail(subject: 'MAIL from BLUE OCEAN - Stage1', body: "'Test mail from blue ocean. Tester: ${TESTER}'", from: 'heena.ah9@gmail.com', mimeType: 'text/html', to: '$To')
           }
         }
       }
@@ -92,7 +92,7 @@ pipeline {
     Tester = 'Heena'
     Windows = 'windows'
     Linux = 'linux'
-    To1 = 'Heena.Sood@infotools.com'
+    To = 'Heena.Sood@infotools.com'
   }
   post {
     always {
