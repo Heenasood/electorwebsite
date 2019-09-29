@@ -2,12 +2,6 @@ pipeline {
   agent any
   stages {
     stage('Enter') {
-      environment {
-        Tester = 'Heena'
-        Windows = 'windows'
-        Linux = 'linux'
-        To = 'Heena.Sood@infotools.com'
-      }
       parallel {
         stage('Enter') {
           steps {
