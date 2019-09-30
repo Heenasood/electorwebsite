@@ -84,12 +84,6 @@ pipeline {
       }
     }
   }
-  environment {
-    Tester = 'Heena'
-    Windows = 'windows'
-    Linux = 'linux'
-    To = 'Heena.Sood@infotools.com'
-  }
   post {
     always {
       echo 'This will always run'
