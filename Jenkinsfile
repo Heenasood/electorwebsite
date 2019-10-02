@@ -80,7 +80,7 @@ pipeline {
       steps {
         emailext(subject: '$BUILD_STATUS', body: '''${JELLY_SCRIPT, template="html"} <br\\><br/> THIS IS FROM ABOUT BUILD <br\\><br/><br\\> Please find build url below for checking logs<br\\><br/><br\\><br/><br\\><br/>
 
-   Thanks, <br\\> Team Jenkins $BUILD_URL''', attachLog: true, mimeType: 'text/html', to: 'heena.sood@infotools.com')
+   Thanks, <br\\> Team Jenkins $BUILD_URL''', attachLog: true, mimeType: 'text/html', to: "$To1, $To2")
       }
     }
   }
@@ -88,7 +88,8 @@ pipeline {
     Tester = 'Heena'
     Windows = 'windows'
     Linux = 'linux'
-    To = 'Heena.Sood@infotools.com'
+    To1 = 'Heena.Sood@infotools.com'
+    To2 = 'Elji.Varughese@infotools.com'
   }
   post {
     always {
