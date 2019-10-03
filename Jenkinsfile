@@ -78,9 +78,7 @@ pipeline {
     }
     stage('About_Build') {
       steps {
-        emailext(subject: '$BUILD_STATUS', body: '''${JELLY_SCRIPT, template="html"} <br\\><br/> THIS IS FROM ABOUT BUILD <br\\><br/><br\\> Please find build url below for checking logs<br\\><br/><br\\><br/><br\\><br/>
-
-   Thanks, <br\\> Team Jenkins $BUILD_URL''', attachLog: true, mimeType: 'text/html', to: "$To1, $To2")
+        emailext(subject: '$BUILD_STATUS', body: '${JELLY_SCRIPT, template="html"}<br/> THIS IS FROM ABOUT BUILD <br/> Please find build url below for checking logs<br/><br/>Thanks,<br/>Team Jenkins $BUILD_URL', attachLog: true, mimeType: 'text/html', to: "$To1, $To2")
       }
     }
   }
@@ -94,6 +92,7 @@ pipeline {
   post {
     always {
       echo 'This will always run'
+      mail(bcc: 'heena.sood@infotools.com', body: "<b>Example</b><br>Project: ${Tester} <br>Build Number: ${node_name} <br> URL de build: ${option_inside}", cc: 'heena.sood@infotools.com', charset: 'UTF-8', from: 'heena.sood@infotools.com', mimeType: 'text/html', replyTo: 'heena.sood@infotools.com', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: 'heena.sood@infotools.com')
 
     }
 
